@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
@@ -261,7 +261,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;
   body { background: #fff !important; color: #1a202c !important; font-size: 11px !important; }
   .sb, .topbar, .mob-nav, .sb-drawer, .sb-backdrop, #print-btn-wrap,
   .btn, button:not(.print-keep), .pager, .tabs,
-  #d-comparativa, #d-benchmark, #ia-suggestions,
+  #d-comparativa, #ia-suggestions,
   [id$="-btn"], .modal-bg { display: none !important; }
   .layout { display: block !important; }
   .main { overflow: visible !important; }
@@ -332,8 +332,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;
     <div class="sb-item" onclick="navClose('roles')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Roles & Usuarios</div>
     <div class="sb-item" onclick="navClose('audit')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Audit Log</div>
     <div class="sb-item" onclick="navClose('config')"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Config</div>
-    <div class="sb-item" onclick="navClose('consolidado')" style="background:rgba(99,179,237,0.07);border:1px solid rgba(99,179,237,0.2);color:#63b3ed;font-weight:600;margin-top:4px">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Vista Grupo</div>
+    
     <div class="sb-item" onclick="exportarExcel();closeDrawer()" style="background:rgba(104,211,145,0.07);border:1px solid rgba(104,211,145,0.2);color:#68d391;font-weight:600;margin-top:4px">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Exportar Excel</div>
     <div class="sb-item" onclick="navClose('ia')" style="background:rgba(232,98,26,0.07);border:1px solid rgba(232,98,26,0.2);color:#e8621a;font-weight:600;margin-top:4px">
@@ -496,15 +495,11 @@ input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;
     <span style="font-size:11px;color:rgba(255,255,255,0.35);font-weight:600;text-transform:uppercase;letter-spacing:.07em">Comparativa vs:</span>
     <button id="btn-cmp-2024" onclick="toggleComparativa(2024)" class="btn xs" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">2024</button>
     <button id="btn-cmp-2023" onclick="toggleComparativa(2023)" class="btn xs" style="background:rgba(255,255,255,0.06);color:rgba(255,255,255,0.5)">2023</button>
-    <span style="font-size:11px;color:rgba(255,255,255,0.12);margin:0 4px">·</span>
-    <button id="btn-benchmark" onclick="toggleBenchmark()" class="btn xs" style="background:rgba(104,211,145,0.12);color:#68d391;border-color:rgba(104,211,145,0.3)">⚡ Benchmark sector</button>
     <span style="font-size:11px;color:rgba(255,255,255,0.2)">Clic para activar/desactivar</span>
   </div>
   <div class="banner"><div style="flex:1;min-width:200px"><h3>Cierre proyectado 2025</h3><div class="big" id="d-fc-big">—</div><div class="sub"><span id="d-fc-badge">—</span> vs presupuesto</div></div><div class="bs" id="d-banner-stats"></div></div>
   <div class="g4" id="d-kpis"></div>
-  <!-- Comparativa + Benchmark — inline, justo debajo de KPIs -->
   <div id="d-comparativa" style="margin-bottom:0"></div>
-  <div id="d-benchmark" style="margin-bottom:0"></div>
   <div class="g14">
     <div class="card">
       <div class="card-head"><div><h3>Budget vs Real vs Forecast</h3><p>Coste mensual (€)</p></div>
@@ -577,31 +572,7 @@ input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;
   </div>
 
   <div id="d-comparativa" style="margin-top:0"></div>
-  <!-- BENCHMARK SECTORIAL -->
-  <div id="d-benchmark" style="margin-top:16px"></div>
 </div>
-<!-- PANEL: CONSOLIDADO -->
-<div class="panel" id="panel-consolidado">
-  <div id="cons-kpis" class="g4" style="margin-bottom:16px"></div>
-  <!-- Tabla entidades -->
-  <div class="card" style="margin-bottom:16px">
-    <div class="card-head">
-      <h3>Grupo consolidado · Personal</h3>
-      <p>Todas las sociedades · Ejercicio 2025</p>
-    </div>
-    <div style="overflow-x:auto"><table id="cons-tabla"></table></div>
-  </div>
-  <!-- Gráfico stacked por entidad -->
-  <div class="card" style="margin-bottom:16px">
-    <div class="card-head"><h3>Distribución del coste por sociedad</h3></div>
-    <div class="card-body">
-      <div id="cons-chart" style="overflow-x:auto"></div>
-    </div>
-  </div>
-  <!-- Detalle por entidad -->
-  <div id="cons-detalle"></div>
-</div>
-
 <!-- PANEL: DATOS -->
 <div class="panel" id="panel-datos">
   <!-- Presupuesto bloqueado vs Estimaciones badge -->
@@ -1596,7 +1567,7 @@ function updateSidebar(){
   document.getElementById("tb-alts-n").textContent=ac;
   document.getElementById("tb-alert-badge").style.display=ac>0?"":"none";
 }
-const TITLES={dashboard:"Dashboard CFO",datos:"Personal · Presupuesto vs Estimaciones",ingresos:"Ingresos · Presupuesto vs Estimaciones",gastos:"Gastos · Presupuesto vs Estimaciones",normas:"Normas de Gasto y Comisiones",forecast:"Forecast & Cierre",simulador:"Simulador de Decisiones",headcount:"Headcount Planning",plantilla:"Plantilla & Costes",eventos:"Calendario Salarial",alertas:"Alertas e Inteligencia",drivers:"Drivers & Causas",ia:"CFO Assistant IA",consolidado:"Vista de Grupo · Consolidado",cc:"Centros de Coste",roles:"Roles & Usuarios",audit:"Audit Log inmutable",config:"Configuración"};
+const TITLES={dashboard:"Dashboard CFO",datos:"Personal · Presupuesto vs Estimaciones",ingresos:"Ingresos · Presupuesto vs Estimaciones",gastos:"Gastos · Presupuesto vs Estimaciones",normas:"Normas de Gasto y Comisiones",forecast:"Forecast & Cierre",simulador:"Simulador de Decisiones",headcount:"Headcount Planning",plantilla:"Plantilla & Costes",eventos:"Calendario Salarial",alertas:"Alertas e Inteligencia",drivers:"Drivers & Causas",ia:"CFO Assistant IA",cc:"Centros de Coste",roles:"Roles & Usuarios",audit:"Audit Log inmutable",config:"Configuración"};
 function nav(id){
   document.querySelectorAll(".panel").forEach(p=>p.classList.remove("active"));
   document.getElementById("panel-"+id).classList.add("active");
@@ -1616,7 +1587,6 @@ function nav(id){
   if(id==="ingresos")renderIngresos();
   if(id==="gastos")renderGastos();
   if(id==="normas")renderNormas();
-  if(id==="consolidado")renderConsolidado();
   if(id==="cc")renderCC();
   if(id==="roles")renderRoles();
   if(id==="audit")renderAudit();
@@ -1719,8 +1689,6 @@ function renderDashboard(){
   // Comparativa interanual
   const cmpEl=document.getElementById('d-comparativa');
   if(cmpEl) cmpEl.innerHTML=renderComparativa();
-  // Benchmark sectorial
-  renderBenchmark();
 }
 function datosTab(id,btn){
   ["mensual","ingresos","export"].forEach(t=>document.getElementById("datos-tab-"+t).style.display="none");
@@ -2761,238 +2729,6 @@ function renderComparativa(){
 }
 
 
-
-// ══════════════════════════════════════════════════════════════════════════════
-// BENCHMARK SECTORIAL — datos basados en base tugesto (8.000 clientes)
-// ══════════════════════════════════════════════════════════════════════════════
-
-// Percentiles por segmento (50-500 emp, SaaS España)
-// Fuente: Base de clientes tugesto anonimizada
-const BENCHMARK_DATA = {
-  segmentos: ['50-100 emp', '100-200 emp', '200-500 emp'],
-  metricas: {
-    costeArr: {
-      label: 'Coste personal / ARR',
-      unidad: '%',
-      desc: 'Porcentaje de los ingresos recurrentes que se destina a coste de personal',
-      invertido: true, // menor = mejor
-      p25: [28, 26, 24],   // percentil 25 (los más eficientes)
-      p50: [34, 32, 29],   // mediana sector
-      p75: [42, 39, 36],   // percentil 75
-      p90: [52, 48, 44],   // top 10% menos eficientes
-      benchmark_top: [22, 20, 18], // top SaaS europeo
-    },
-    rpe: {
-      label: 'Revenue per Employee (RPE)',
-      unidad: '€K',
-      desc: 'ARR generado por cada empleado. Indicador clave de productividad',
-      invertido: false, // mayor = mejor
-      p25: [85, 95, 110],
-      p50: [115, 130, 155],
-      p75: [155, 175, 210],
-      p90: [200, 230, 280],
-      benchmark_top: [250, 300, 380],
-    },
-    costeEmpMes: {
-      label: 'Coste empresa / empleado / mes',
-      unidad: '€',
-      desc: 'Coste medio mensual por empleado incluyendo SS empresa',
-      invertido: false,
-      p25: [2800, 3100, 3400],
-      p50: [3400, 3800, 4200],
-      p75: [4200, 4700, 5300],
-      p90: [5500, 6200, 7100],
-      benchmark_top: [6500, 7500, 9000],
-    },
-    hcGrowth: {
-      label: 'Crecimiento headcount YoY',
-      unidad: '%',
-      desc: 'Variación anual de plantilla. Indicador de expansión/contracción',
-      invertido: false,
-      p25: [-2, -1, -3],
-      p50: [5, 6, 4],
-      p75: [14, 12, 10],
-      p90: [28, 24, 20],
-      benchmark_top: [35, 30, 25],
-    },
-    dvpBudget: {
-      label: 'Desviación media vs presupuesto',
-      unidad: '%',
-      desc: 'Desviación promedio mensual sobre presupuesto. Indica precisión de planificación',
-      invertido: true,
-      p25: [0.8, 0.7, 0.6],
-      p50: [2.1, 1.9, 1.7],
-      p75: [4.5, 4.0, 3.5],
-      p90: [8.2, 7.5, 6.8],
-      benchmark_top: [0.5, 0.4, 0.3],
-    },
-  }
-};
-
-let benchmarkVisible = false;
-
-function toggleBenchmark(){
-  benchmarkVisible = !benchmarkVisible;
-  const btn = document.getElementById('btn-benchmark');
-  if(btn){
-    btn.style.background = benchmarkVisible ? '#68d391' : 'rgba(104,211,145,0.12)';
-    btn.style.color = benchmarkVisible ? '#0d1117' : '#68d391';
-    btn.style.borderColor = benchmarkVisible ? '#68d391' : 'rgba(104,211,145,0.3)';
-  }
-  // Only update benchmark section
-  renderBenchmark();
-}
-
-function getSegmentoIdx(){
-  const n = emps.length;
-  if(n <= 100) return 0;
-  if(n <= 200) return 1;
-  return 2;
-}
-
-function calcularPercentil(valor, metrica, segIdx){
-  const d = metrica;
-  const inv = d.invertido;
-  // Para métricas invertidas (menor=mejor), el percentil se invierte
-  const breakpoints = inv
-    ? [d.p90[segIdx], d.p75[segIdx], d.p50[segIdx], d.p25[segIdx]]
-    : [d.p25[segIdx], d.p50[segIdx], d.p75[segIdx], d.p90[segIdx]];
-  const labels = inv
-    ? ['< P25', 'P25–P50', 'P50–P75', 'P75–P90', '> P90']
-    : ['< P25', 'P25–P50', 'P50–P75', 'P75–P90', '> P90'];
-
-  let pct;
-  if(inv){
-    if(valor <= d.p25[segIdx]) pct = 90;
-    else if(valor <= d.p50[segIdx]) pct = 70;
-    else if(valor <= d.p75[segIdx]) pct = 45;
-    else if(valor <= d.p90[segIdx]) pct = 20;
-    else pct = 8;
-  } else {
-    if(valor >= d.p90[segIdx]) pct = 90;
-    else if(valor >= d.p75[segIdx]) pct = 75;
-    else if(valor >= d.p50[segIdx]) pct = 55;
-    else if(valor >= d.p25[segIdx]) pct = 30;
-    else pct = 12;
-  }
-  return pct;
-}
-
-function renderBenchmark(){
-  const el = document.getElementById('d-benchmark');
-  if(!el) return;
-  if(!benchmarkVisible){ el.innerHTML = ''; return; }
-
-  const segIdx = getSegmentoIdx();
-  const segNombre = BENCHMARK_DATA.segmentos[segIdx];
-  const total = emps.reduce((s,e)=>s+eA(e),0);
-  const arr = revenue.arr || 1;
-  const {dvp} = getBudStats();
-  const hcPrev = HISTORICO[2024]?.headcount?.fin || emps.length;
-
-  // Valores del cliente
-  const valores = {
-    costeArr:    revenue.arr ? Math.round(total/arr*100) : null,
-    rpe:         revenue.arr && emps.length ? Math.round(revenue.arr/emps.length/1000) : null,
-    costeEmpMes: emps.length ? Math.round(total/emps.length/12) : null,
-    hcGrowth:    hcPrev ? Math.round((emps.length/hcPrev - 1)*100) : null,
-    dvpBudget:   Math.abs(parseFloat(dvp.toFixed(1))),
-  };
-
-  const metricas = Object.entries(BENCHMARK_DATA.metricas);
-
-  let html = `
-  <div class="card" style="border:1px solid rgba(104,211,145,0.2);border-top:3px solid #68d391">
-    <div class="card-head">
-      <div>
-        <h3 style="color:#fff">⚡ Benchmark sectorial tugesto</h3>
-        <p>Tu empresa vs ${segNombre} · SaaS España · Datos anonimizados base tugesto (8.000 clientes)</p>
-      </div>
-      <span style="font-size:11px;background:rgba(104,211,145,0.12);color:#68d391;border-radius:5px;padding:3px 10px;font-weight:700;border:1px solid rgba(104,211,145,0.25)">${segNombre}</span>
-    </div>
-    <div class="card-body">
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px">
-  `;
-
-  metricas.forEach(([key, m]) => {
-    const val = valores[key];
-    if(val === null){ return; }
-    const pct = calcularPercentil(val, m, segIdx);
-    const inv = m.invertido;
-    const barColor = pct >= 70 ? '#68d391' : pct >= 40 ? '#f6ad55' : '#fc8181';
-    const statusLabel = pct >= 70 ? (inv ? 'Por debajo de la mediana ✓' : 'Por encima de la mediana ✓')
-                      : pct >= 40 ? 'En la mediana del sector'
-                      : (inv ? 'Por encima de la mediana ⚠' : 'Por debajo de la mediana ⚠');
-    const statusColor = pct >= 70 ? '#68d391' : pct >= 40 ? '#f6ad55' : '#fc8181';
-
-    // Gauge bar
-    const barW = pct;
-    // Reference lines
-    const p50W = 50;
-    const topW = 85;
-
-    html += `
-    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px 16px">
-      <div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px">
-        <div>
-          <div style="font-size:12px;font-weight:700;color:#fff;margin-bottom:3px">${m.label}</div>
-          <div style="font-size:10px;color:rgba(255,255,255,0.35);line-height:1.4">${m.desc}</div>
-        </div>
-        <div style="text-align:right;flex-shrink:0;margin-left:12px">
-          <div style="font-size:18px;font-weight:800;color:#fff">${val}${m.unidad}</div>
-          <div style="font-size:10px;color:${statusColor};font-weight:600;margin-top:2px">${statusLabel}</div>
-        </div>
-      </div>
-      <!-- Gauge -->
-      <div style="position:relative;height:8px;background:rgba(255,255,255,0.08);border-radius:4px;margin-bottom:8px">
-        <div style="position:absolute;left:0;top:0;height:100%;width:${barW}%;background:${barColor};border-radius:4px;transition:width .4s ease"></div>
-        <!-- Mediana marker -->
-        <div style="position:absolute;left:${p50W}%;top:-3px;width:2px;height:14px;background:rgba(255,255,255,0.4);border-radius:1px"></div>
-        <!-- Top marker -->
-        <div style="position:absolute;left:${topW}%;top:-3px;width:2px;height:14px;background:#68d391;border-radius:1px;opacity:0.6"></div>
-      </div>
-      <!-- Escala -->
-      <div style="display:flex;justify-content:space-between;font-size:9px;color:rgba(255,255,255,0.25)">
-        <span>P25: ${m.p25[segIdx]}${m.unidad}</span>
-        <span>Mediana: ${m.p50[segIdx]}${m.unidad}</span>
-        <span>P75: ${m.p75[segIdx]}${m.unidad}</span>
-        <span style="color:#68d391;opacity:0.7">Top: ${m.benchmark_top[segIdx]}${m.unidad}</span>
-      </div>
-    </div>`;
-  });
-
-  // Score global
-  const scores = metricas.map(([key,m]) => valores[key]!==null ? calcularPercentil(valores[key],m,segIdx) : null).filter(v=>v!==null);
-  const avgScore = scores.length ? Math.round(scores.reduce((a,b)=>a+b,0)/scores.length) : 0;
-  const scoreColor = avgScore >= 70 ? '#68d391' : avgScore >= 45 ? '#f6ad55' : '#fc8181';
-  const scoreLabel = avgScore >= 70 ? 'Eficiencia alta vs sector' : avgScore >= 45 ? 'En línea con el sector' : 'Margen de mejora vs sector';
-
-  html += `
-      </div>
-      <!-- Score global -->
-      <div style="margin-top:16px;padding:14px 16px;background:rgba(104,211,145,0.05);border:1px solid rgba(104,211,145,0.15);border-radius:10px;display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-        <div style="display:flex;align-items:center;gap:12px">
-          <div style="width:52px;height:52px;border-radius:50%;border:3px solid ${scoreColor};display:flex;align-items:center;justify-content:center;flex-shrink:0">
-            <span style="font-size:16px;font-weight:800;color:${scoreColor}">${avgScore}</span>
-          </div>
-          <div>
-            <div style="font-size:13px;font-weight:700;color:#fff">Score de eficiencia</div>
-            <div style="font-size:11px;color:${scoreColor};font-weight:600">${scoreLabel}</div>
-          </div>
-        </div>
-        <div style="flex:1;min-width:200px;font-size:11px;color:rgba(255,255,255,0.4);line-height:1.6">
-          Percentil medio ponderado sobre ${scores.length} métricas vs empresas del segmento <strong style="color:rgba(255,255,255,0.6)">${segNombre}</strong>
-          del sector SaaS España. Fuente: base anonimizada de ${(8000).toLocaleString('es-ES')} clientes tugesto.
-        </div>
-        <button onclick="exportarExcel()" class="btn sm" style="background:rgba(104,211,145,0.1);border-color:rgba(104,211,145,0.3);color:#68d391;flex-shrink:0">
-          ⬇ Exportar análisis
-        </button>
-      </div>
-    </div>
-  </div>`;
-
-  el.innerHTML = html;
-}
 
 // ══════════════════════════════════════════════════════════════════════════════
 // MULTI-ENTIDAD — CONSOLIDADO
